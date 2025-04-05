@@ -5,6 +5,6 @@ require("lazy-config")
 require("bufferline").setup{}
 require("lsp")
 require("autopair")
-require("whichkeys")
+-- require("whichkeys")
 
 require("colorscheme")

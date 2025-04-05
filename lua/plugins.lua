@@ -21,6 +21,9 @@ return {
                 },
         },
 
+        -- dependency for which-key
+        { 'echasnovski/mini.icons', version = false },
+
         -- Colorscheme
         { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
