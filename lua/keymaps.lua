@@ -29,7 +29,7 @@ keymap("v", "<leader>y", '"+y', opts) -- visual mode
 keymap("n", "<leader>y", '"+y', opts) -- normal mode
 keymap("n", "<leader>Y", '"+Y', opts) -- quick grab line normal mode
 
--- indent all selected lines left or right
+-- Indent all selected lines left or right
 keymap("v", ">", ">gv", opts) -- Left Indentation
 keymap("v", "<", "<gv", opts) -- Right Indentation
 
@@ -48,13 +48,19 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = 'Telescope find 
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = 'Telescope live grep' })
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = 'Telescope buffers' })
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = 'Telescope help tags' })
-keymap("n", '<leader>ft', ":NvimTreeToggle <CR>", { desc = 'File tree in sidebar'})
+keymap("n", "<leader>ft", ":NvimTreeToggle <CR>", { desc = 'File tree in sidebar'})
 
 -- Git
-keymap("n", '<leader>gs', ":G status <CR>", { desc = 'Git status'})
-keymap("n", '<leader>ga', ":G add % <CR>", { desc = 'Git add current file'})
-keymap("n", '<leader>gc', ":G commit <CR>", { desc = 'Git commit'})
-keymap("n", '<leader>gp', ":G push <CR>", { desc = 'Git push'})
+keymap("n", "<leader>gs", ":G status <CR>", { desc = 'Git status'})
+keymap("n", "<leader>ga", ":G add % <CR>", { desc = 'Git add current file'})
+keymap("n", "<leader>gc", ":G commit <CR>", { desc = 'Git commit'})
+keymap("n", "<leader>gp", ":G push <CR>", { desc = 'Git push'})
 
--- Undo tree (this is just for the label in which-key)
-keymap("n", '<leader>u', ":lua require('undotree').toggle()<cr>", { desc = 'Undo tree toggle'})
+-- Undo tree
+keymap("n", "<leader>u", ":lua require('undotree').toggle() <CR>", { desc = 'Undo tree toggle'})
+
+-- Buffer switching
+keymap("n", "<leader>bp", ":bp <CR>", { desc = 'Previous buffer'})
+keymap("n", "<leader>bn", ":bn <CR>", { desc = 'Next buffer'})
+keymap("n", "<leader>bl", ":buffers <CR>", { desc = 'List all buffers'})
+keymap("n", "<leader>bb", ":Telescope buffers <CR>", { desc = 'Search all buffers'})
