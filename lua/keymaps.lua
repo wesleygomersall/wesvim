@@ -40,11 +40,9 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-vim.keymap.set('n', '<leader>ff', ":Telescope find_files<CR>", { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', ":Telescope live_grep<CR>", { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', ":Telescope buffers<CR>", { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>", { desc = 'Telescope help tags' })
+-- Telescope and file tree
+vim.keymap.set('n', "<leader>ff", ":Telescope find_files<CR>", { desc = 'Telescope find files' })
+vim.keymap.set('n', "<leader>fg", ":Telescope live_grep<CR>", { desc = 'Telescope live grep' })
+vim.keymap.set('n', "<leader>fb", ":Telescope buffers<CR>", { desc = 'Telescope buffers' })
+vim.keymap.set('n', "<leader>fh", ":Telescope help_tags<CR>", { desc = 'Telescope help tags' })
 keymap("n", '<leader>ft', ":NvimTreeToggle <CR>", { desc = 'File tree in sidebar'})
-
-keymap("n", '<leader>th', ":ToggleTerm size=20 dir=~/Desktop direction=horizontal name=desktop <CR>", { desc = 'Terminal in horizontal window'})
-keymap("n", '<leader>tv', ":ToggleTerm size=20 dir=~/Desktop direction=vertical name=desktop <CR>", { desc = 'Terminal in vertical window'})
