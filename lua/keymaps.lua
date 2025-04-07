@@ -55,3 +55,6 @@ keymap("n", '<leader>gs', ":G status <CR>", { desc = 'Git status'})
 keymap("n", '<leader>ga', ":G add % <CR>", { desc = 'Git add current file'})
 keymap("n", '<leader>gc', ":G commit <CR>", { desc = 'Git commit'})
 keymap("n", '<leader>gp', ":G push <CR>", { desc = 'Git push'})
+
+-- Undo tree (this is just for the label in which-key)
+keymap("n", '<leader>u', ":lua require('undotree').toggle()<cr>", { desc = 'Undo tree toggle'})
