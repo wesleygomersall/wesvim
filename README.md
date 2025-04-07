@@ -2,7 +2,13 @@
 
 This is my ongoing configuration for neovim.
 
-Version 1.0 for nvim v0.10.4 Release
+Version 1.0 
+
+```
+NVIM v0.10.4
+Build type: Release
+LuaJIT 2.1.1713484068
+```
 
 # Plugins
 
