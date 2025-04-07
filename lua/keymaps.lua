@@ -41,8 +41,8 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope and file tree
-vim.keymap.set('n', "<leader>ff", ":Telescope find_files<CR>", { desc = 'Telescope find files' })
-vim.keymap.set('n', "<leader>fg", ":Telescope live_grep<CR>", { desc = 'Telescope live grep' })
-vim.keymap.set('n', "<leader>fb", ":Telescope buffers<CR>", { desc = 'Telescope buffers' })
-vim.keymap.set('n', "<leader>fh", ":Telescope help_tags<CR>", { desc = 'Telescope help tags' })
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = 'Telescope find files' })
+keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = 'Telescope live grep' })
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = 'Telescope buffers' })
+keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = 'Telescope help tags' })
 keymap("n", '<leader>ft', ":NvimTreeToggle <CR>", { desc = 'File tree in sidebar'})
