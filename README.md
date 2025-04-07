@@ -1,10 +1,11 @@
-# WesVim 
-
-This is my ongoing configuration for neovim.
-
-WesVim Version 1.0 
-
 ```
+  _      __      _   ___       
+ | | /| / /__ __| | / (_)_ _   
+ | |/ |/ / -_|_-< |/ / /  ' \  
+ |__/|__/\__/___/___/_/_/_/_/  
+
+WesVim Version 1.0
+
 NVIM v0.10.4
 Build type: Release
 LuaJIT 2.1.1713484068
