@@ -9,6 +9,9 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+keymap("n", "H", "^", opts)
+keymap("n", "L", "$", opts)
+
 -- Use ctrl-[hjkl] to select the active split
 keymap("n", "<C-h>", "<C-w>h", opts) -- left window
 keymap("n", "<C-k>", "<C-w>k", opts) -- up window
@@ -46,3 +49,9 @@ keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = 'Telescope live g
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = 'Telescope buffers' })
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = 'Telescope help tags' })
 keymap("n", '<leader>ft', ":NvimTreeToggle <CR>", { desc = 'File tree in sidebar'})
+
+-- Git
+keymap("n", '<leader>gs', ":G status <CR>", { desc = 'Git status'})
+keymap("n", '<leader>ga', ":G add % <CR>", { desc = 'Git add current file'})
+keymap("n", '<leader>gc', ":G commit <CR>", { desc = 'Git commit'})
+keymap("n", '<leader>gp', ":G push <CR>", { desc = 'Git push'})
