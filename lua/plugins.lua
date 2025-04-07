@@ -24,6 +24,15 @@ return {
         -- dependency for which-key
         { 'echasnovski/mini.icons', version = false },
 
+        -- file sidebar
+        {
+        'nvim-tree/nvim-tree.lua',
+        lazy = true,
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+            },
+        },
+
         -- Colorscheme
         { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 

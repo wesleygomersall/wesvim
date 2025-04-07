@@ -3,8 +3,9 @@ require("options")
 
 require("lazy-config")
 require("bufferline").setup{}
+require("nvim-tree").setup{}
 require("lsp")
 require("autopair")
--- require("whichkeys")
+require("greeter")
 
 require("colorscheme")
