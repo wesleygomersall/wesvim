@@ -2,9 +2,9 @@ local opt = vim.opt
 
 
 -- opt.autowrite = true -- Enable auto write
--- opt.clipboard = "unnamedplus" -- Sync with system clipboard
+opt.clipboard = "unnamedplus" -- Sync with system clipboard
 -- opt.completeopt = "menu,menuone,noselect"
--- opt.conceallevel = 3 -- Hide * markup for bold and italic
+opt.conceallevel = 3 -- Hide * markup for bold and italic
 -- opt.confirm = true -- Confirm to save changes before exiting modified buffer
 -- opt.cursorline = true -- Enable highlighting of the current line
 -- opt.formatoptions = "jcroqlnt" -- tcqj
@@ -23,7 +23,6 @@ opt.updatetime = 100 -- Save swap file and trigger CursorHold
 opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
 opt.relativenumber = true -- Relative line numbers
 opt.colorcolumn = "80"
--- opt.scrolloff = 5 -- Lines of context
 -- opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 -- opt.shiftround = true -- Round indent
 -- opt.shiftwidth = 4 -- Size of an indent
