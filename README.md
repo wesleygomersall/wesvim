@@ -23,6 +23,24 @@ make install
 export PATH="$HOME/neovim/bin:$PATH"
 ```
 
+# For NVIM 11.0+ 
+
+Comment the line in `init.lua`: 
+
+```
+require("keymaps")
+require("options")
+
+require("lazy-config")
+require("bufferline").setup{}
+require("nvim-tree").setup{}
+-- require("lsp") 		-- This line removed/commented
+require("autopair")
+require("greeter")
+
+require("colorscheme")
+```
+
 # Plugins
 
 Uses Lazy plugin manager.
