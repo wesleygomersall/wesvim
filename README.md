@@ -4,12 +4,22 @@
  | |/ |/ / -_|_-< |/ / /  ' \  
  |__/|__/\__/___/___/_/_/_/_/  
 
-WesVim Version 1.0
+WesVim Version 1.1
 
-NVIM v0.10.4
+NVIM v0.11.1
 Build type: Release
-LuaJIT 2.1.1713484068
+LuaJIT 2.1.1744318430
 ```
+
+Clone this directory and copy or rename it to the following path: 
+
+```bash
+~/.config/nvim
+```
+
+After this, everything should install with Lazy package manager when you start neovim.
+
+## Building neovim from source
 
 Find releases of neovim here: 
 https://github.com/neovim/neovim/releases
@@ -23,9 +33,19 @@ make install
 export PATH="$HOME/neovim/bin:$PATH"
 ```
 
-# For NVIM 11.0+ 
+To uninstall after this, use 
 
-Comment the line in `init.lua`: 
+```
+sudo rm /usr/local/bin/nvim
+sudo rm -r /usr/local/share/nvim/
+```
+
+Or just download and unpack the `.tar.gz` from latest release and set alias to
+it. I find this the simplest on remote.
+
+## For NVIM <11.0 
+
+Uncomment the line in `init.lua`: `require("lsp")` 
 
 ```
 require("keymaps")
@@ -34,14 +54,14 @@ require("options")
 require("lazy-config")
 require("bufferline").setup{}
 require("nvim-tree").setup{}
--- require("lsp") 		-- This line removed/commented
+-- require("lsp") --NVIM <11.0 uncomment this
 require("autopair")
 require("greeter")
 
 require("colorscheme")
 ```
 
-# Plugins
+## Plugins
 
 Uses Lazy plugin manager.
 
@@ -56,7 +76,7 @@ Uses Lazy plugin manager.
 - telescope
 - toggleterm
 - undotree
-- lsp-zero
+- lsp-zero with NVIM <11.0
 - nvim-autopairs
 - vim-gitgutter
 
