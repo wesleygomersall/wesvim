@@ -1,3 +1,5 @@
+-- As of NVIM version 11.0, this is not required in init.lua
+
 -- Learn the keybindings, see :help lsp-zero-keybindings
 -- Learn to configure LSP servers, see :help lsp-zero-api-showcase
 local lsp = require('lsp-zero')
