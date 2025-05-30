@@ -43,24 +43,6 @@ sudo rm -r /usr/local/share/nvim/
 Or just download and unpack the `.tar.gz` from latest release and set alias to
 it. I find this the simplest on remote.
 
-## For NVIM <11.0 
-
-Uncomment the line in `init.lua`: `require("lsp")` 
-
-```
-require("keymaps")
-require("options")
-
-require("lazy-config")
-require("bufferline").setup{}
-require("nvim-tree").setup{}
--- require("lsp") --NVIM <11.0 uncomment this
-require("autopair")
-require("greeter")
-
-require("colorscheme")
-```
-
 ## Plugins
 
 Uses Lazy plugin manager.
