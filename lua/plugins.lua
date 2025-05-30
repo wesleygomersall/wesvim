@@ -1,7 +1,6 @@
 return {
     -- Plugins will be added here accordingly.
 
-
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -58,23 +57,23 @@ return {
     },
 
     -- LSP
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
-        dependencies = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+    -- {
+        -- 'VonHeikemen/lsp-zero.nvim',
+        -- branch = 'v1.x',
+        -- dependencies = {
+            -- -- LSP Support
+            -- { 'neovim/nvim-lspconfig' },
+            -- { 'williamboman/mason.nvim' },
+            -- { 'williamboman/mason-lspconfig.nvim' },
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-        }
-    },
+            -- -- Autocompletion
+            -- { 'hrsh7th/nvim-cmp' },
+            -- { 'hrsh7th/cmp-nvim-lsp' },
+        -- }
+    -- },
 
     -- Auto Pairs for parantheses and quotes
-    {"windwp/nvim-autopairs"},
+    -- {"windwp/nvim-autopairs"},
 
     -- treesitter
     {"nvim-treesitter/nvim-treesitter"},

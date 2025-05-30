@@ -76,8 +76,6 @@ Uses Lazy plugin manager.
 - telescope
 - toggleterm
 - undotree
-- lsp-zero with NVIM <11.0
-- nvim-autopairs
 - vim-gitgutter
 
 Not necessary, but recommended:
