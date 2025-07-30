@@ -43,6 +43,10 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+--Access command line
+keymap("n", "<leader>!", ":! ", { desc = 'Enter command' })
+keymap("n", "<leader>:", ":r! ", { desc = 'Print command output into buffer' })
+
 -- Telescope and file tree
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = 'Telescope find files' })
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = 'Telescope live grep' })
