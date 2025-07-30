@@ -3,6 +3,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 local keymap = vim.api.nvim_set_keymap
+local unmap = vim.api.nvim_del_keymap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -25,9 +26,9 @@ keymap("n", "<c-right>", ":vertical resize -2<cr>", opts)
 keymap("n", "<c-left>", ":vertical resize +2<cr>", opts)
 
 -- copy selection to system clipboard
-keymap("v", "<leader>y", '"+y', opts) -- visual mode
-keymap("n", "<leader>y", '"+y', opts) -- normal mode
-keymap("n", "<leader>Y", '"+Y', opts) -- quick grab line normal mode
+keymap("v", "<leader>y", '"+y', { desc = 'Copy selection to system clipboard' }) -- visual mode
+keymap("n", "<leader>y", '"+y', { desc = 'Copy selection to system clipboard' }) -- normal mode
+keymap("n", "<leader>Y", '"+Y', { desc = 'Copy line to system clipboard' }) -- quick grab line normal mode
 
 -- Indent all selected lines left or right
 keymap("v", ">", ">gv", opts) -- Left Indentation
@@ -48,13 +49,15 @@ keymap("n", "<leader>!", ":! ", { desc = 'Enter command' })
 keymap("n", "<leader>:", ":r! ", { desc = 'Print command output into buffer' })
 
 -- Telescope and file tree
+keymap("n", "<leader>f", "", { desc = 'Telescope and file tree' })
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = 'Telescope find files' })
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = 'Telescope live grep' })
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = 'Telescope buffers' })
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = 'Telescope help tags' })
 keymap("n", "<leader>ft", ":NvimTreeToggle <CR>", { desc = 'File tree in sidebar'})
 
 -- Git
+keymap("n", "<leader>g", "", { desc = 'Git'})
+keymap("n", "<leader>h", "", { desc = 'Git hunks'})
 keymap("n", "<leader>gs", ":G status <CR>", { desc = 'Git status'})
 keymap("n", "<leader>ga", ":G add % <CR>", { desc = 'Git add current file'})
 keymap("n", "<leader>gc", ":G commit <CR>", { desc = 'Git commit'})
@@ -63,8 +66,10 @@ keymap("n", "<leader>gp", ":G push <CR>", { desc = 'Git push'})
 -- Undo tree
 keymap("n", "<leader>u", ":lua require('undotree').toggle() <CR>", { desc = 'Undo tree toggle'})
 
--- Buffer switching
+-- Buffer management
+keymap("n", "<leader>b", "", { desc = 'Buffer management'})
 keymap("n", "<leader>bp", ":bp <CR>", { desc = 'Previous buffer'})
 keymap("n", "<leader>bn", ":bn <CR>", { desc = 'Next buffer'})
 keymap("n", "<leader>bl", ":buffers <CR>", { desc = 'List all buffers'})
 keymap("n", "<leader>bb", ":Telescope buffers <CR>", { desc = 'Search all buffers'})
+keymap("n", "<leader>bd", ":bd <CR>", { desc = 'Close current buffer'})
