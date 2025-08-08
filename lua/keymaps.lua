@@ -41,15 +41,20 @@ keymap("v", "<", "<gv", opts) -- Right Indentation
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
---Better terminal navigation
+-- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
---Access command line
+-- Access command line
 keymap("n", "<leader>!", ":! ", { desc = 'Enter command' })
 keymap("n", "<leader>:", ":r! ", { desc = 'Print command output into buffer' })
+
+-- Insert date and time info
+keymap("n", "<leader>d", "", { desc = 'Insert date/time at end of line' })
+keymap("n", "<leader>di", ":r! date -I <CR> kJ", {desc = '`date -I` (ISO 8601 format) YYYY-MM-DD' })
+keymap("n", "<leader>dr", ":r! date -R <CR> kJ", {desc = '`date -R` (RFC 5322 format) Day, DD Month YYYY HH:MM:SS timezone' })
 
 -- Telescope and file tree
 keymap("n", "<leader>f", "", { desc = 'Telescope and file tree' })
