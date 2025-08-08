@@ -10,8 +10,11 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- H, L -> jump to start/end of line 
 keymap("n", "H", "^", opts)
 keymap("n", "L", "$", opts)
+keymap("v", "H", "^", opts)
+keymap("v", "L", "$", opts)
 
 -- Use ctrl-[hjkl] to select the active split
 keymap("n", "<C-h>", "<C-w>h", opts) -- left window
