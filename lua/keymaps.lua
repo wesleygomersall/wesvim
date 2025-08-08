@@ -5,6 +5,9 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 local unmap = vim.api.nvim_del_keymap
 
+-- Remove search highlight
+keymap("n", "<ESC>", ":nohls<CR>", { desc = 'Remove highlight from search' })
+
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
