@@ -59,6 +59,11 @@ keymap("n", "<leader>d", "", { desc = 'Insert date/time at end of line' })
 keymap("n", "<leader>di", ":r! date -I <CR> kJ", {desc = '`date -I` (ISO 8601 format) YYYY-MM-DD' })
 keymap("n", "<leader>dr", ":r! date -R <CR> kJ", {desc = '`date -R` (RFC 5322 format) Day, DD Month YYYY HH:MM:SS timezone' })
 
+-- Insert file paths 
+keymap("n", "<leader>l", "", { desc = 'Insert file paths' })
+keymap("n", "<leader>ll", ":r! ls -1 <CR>", { desc = '`ls -1 .`' })
+keymap("n", "<leader>lf", ":r! find ", { desc = 'Find in other directory' })
+
 -- Telescope and file tree
 keymap("n", "<leader>f", "", { desc = 'Telescope and file tree' })
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = 'Telescope find files' })
