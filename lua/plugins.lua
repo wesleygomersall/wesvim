@@ -21,12 +21,6 @@ return {
         dependencies = {'echasnovski/mini.icons', version = false},
     },
 
-    -- file sidebar
-    {'nvim-tree/nvim-tree.lua',
-     lazy = true,
-     dependencies = {'nvim-tree/nvim-web-devicons'},
-    },
-
     -- Colorscheme
     {"bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000},
 
@@ -81,4 +75,12 @@ return {
     -- Git Integration
     {"airblade/vim-gitgutter",
      "tpope/vim-fugitive"},
+
+    -- typst live updates 
+    {'chomosuke/typst-preview.nvim',
+     lazy = false, -- or ft = 'typst'
+     version = '1.*',
+     opts = {}, -- lazy.nvim will implicitly calls `setup {}` 
+    },
+
 }

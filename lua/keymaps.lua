@@ -69,7 +69,6 @@ keymap("n", "<leader>f", "", { desc = 'Telescope and file tree' })
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = 'Telescope find files' })
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = 'Telescope live grep' })
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = 'Telescope help tags' })
-keymap("n", "<leader>ft", ":NvimTreeToggle <CR>", { desc = 'File tree in sidebar'})
 
 -- Git
 keymap("n", "<leader>g", "", { desc = 'Git'})

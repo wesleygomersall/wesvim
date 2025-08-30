@@ -45,22 +45,17 @@ it. I find this the simplest on remote.
 
 ## Plugins
 
-Uses Lazy plugin manager.
-
-- Lazy plugin manager: https://github.com/folke/lazy.nvim
-- Which-key for contextual popup for motions https://github.com/folke/which-key.nvim
-- Alpha greeting screen 
-- Treesitter 
+Uses Lazy plugin manager: https://github.com/folke/lazy.nvim
+- Which-key https://github.com/folke/which-key.nvim
+- Alpha greeting screen https://github.com/goolord/alpha-nvim
+- Treesitter https://github.com/nvim-treesitter/nvim-treesitter
+- vim-moonfly-colors colorscheme https://github.com/bluz71/vim-moonfly-colors
+- bufferline shows active buffers at top of the screen https://github.com/akinsho/bufferline.nvim
+- telescope https://github.com/nvim-telescope/telescope.nvim
+- toggleterm https://github.com/akinsho/toggleterm.nvim
+- undotree https://github.com/jiaoshijie/undotree
+- vim-gitgutter https://github.com/airblade/vim-gitgutter
 - Fugitive https://github.com/tpope/vim-fugitive
-- nvim-tree file side bar
-- vim-moonfly-colors colorscheme
-- bufferline shows active buffers at top of the screen
-- telescope
-- toggleterm
-- undotree
-- vim-gitgutter
-
-Not necessary, but recommended:
-- mini.icons
-- nvim-web-devicons
+- mini.icons https://github.com/nvim-mini/mini.icons
+- Typst live preview https://github.com/chomosuke/typst-preview.nvim
 - nerd font
