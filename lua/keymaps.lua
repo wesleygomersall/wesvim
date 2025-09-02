@@ -88,3 +88,10 @@ keymap("n", "<leader>bn", ":bn <CR>", { desc = 'Next buffer'})
 keymap("n", "<leader>bl", ":buffers <CR>", { desc = 'List all buffers'})
 keymap("n", "<leader>bb", ":Telescope buffers <CR>", { desc = 'Search all buffers'})
 keymap("n", "<leader>bd", ":bd <CR>", { desc = 'Close current buffer'})
+
+-- :make and quickfix
+keymap("n", "<leader>mk", ":make <CR>", { desc = ':make'})
+keymap("n", "<leader>mo", ":copen <CR>", { desc = 'Open quickfix'})
+keymap("n", "<leader>mc", ":cclose <CR>", { desc = 'Close quickfix'})
+keymap("n", "<leader>mn", ":cnext <CR>", { desc = 'Next quickfix'})
+keymap("n", "<leader>mp", ":cprev <CR>", { desc = 'Previous quickfix'})
