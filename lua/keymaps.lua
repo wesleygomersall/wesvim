@@ -72,7 +72,6 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = 'Telescope help t
 
 -- Git
 keymap("n", "<leader>g", "", { desc = 'Git'})
-keymap("n", "<leader>h", "", { desc = 'Git hunks'})
 keymap("n", "<leader>gs", ":G status <CR>", { desc = 'Git status'})
 keymap("n", "<leader>ga", ":G add % <CR>", { desc = 'Git add current file'})
 keymap("n", "<leader>gc", ":G commit <CR>", { desc = 'Git commit'})
@@ -95,3 +94,6 @@ keymap("n", "<leader>mo", ":copen <CR>", { desc = 'Open quickfix'})
 keymap("n", "<leader>mc", ":cclose <CR>", { desc = 'Close quickfix'})
 keymap("n", "<leader>mn", ":cnext <CR>", { desc = 'Next quickfix'})
 keymap("n", "<leader>mp", ":cprev <CR>", { desc = 'Previous quickfix'})
+
+-- diagnostics (overwrote <leader>d)
+keymap("n", "<leader>h", ":lua vim.diagnostic.open_float() <CR>", { desc = 'LSP Diagnostic'})
