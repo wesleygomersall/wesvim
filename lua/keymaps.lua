@@ -31,6 +31,17 @@ keymap("n", "<c-down>", ":resize +2<cr>", opts)
 keymap("n", "<c-right>", ":vertical resize -2<cr>", opts)
 keymap("n", "<c-left>", ":vertical resize +2<cr>", opts)
 
+-- Lua snippets
+-- set by luasnip config in plugins.lua
+-- vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
+-- vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+-- vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+-- vim.keymap.set({"i", "s"}, "<C-E>", function()
+	-- if ls.choice_active() then
+		-- ls.change_choice(1)
+	-- end
+-- end, {silent = true})
+
 -- copy selection to system clipboard
 keymap("v", "<leader>y", '"+y', { desc = 'Copy selection to system clipboard' }) -- visual mode
 keymap("n", "<leader>y", '"+y', { desc = 'Copy selection to system clipboard' }) -- normal mode
@@ -53,11 +64,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Access command line
 keymap("n", "<leader>!", ":! ", { desc = 'Enter command' })
 keymap("n", "<leader>:", ":r! ", { desc = 'Print command output into buffer' })
-
--- Insert date and time info
-keymap("n", "<leader>d", "", { desc = 'Insert date/time at end of line' })
-keymap("n", "<leader>di", ":r! date -I <CR> kJ", {desc = '`date -I` (ISO 8601 format) YYYY-MM-DD' })
-keymap("n", "<leader>dr", ":r! date -R <CR> kJ", {desc = '`date -R` (RFC 5322 format) Day, DD Month YYYY HH:MM:SS timezone' })
 
 -- Insert file paths 
 keymap("n", "<leader>l", "", { desc = 'Insert file paths' })
@@ -97,3 +103,6 @@ keymap("n", "<leader>mp", ":cprev <CR>", { desc = 'Previous quickfix'})
 
 -- diagnostics (overwrote <leader>d)
 keymap("n", "<leader>h", ":lua vim.diagnostic.open_float() <CR>", { desc = 'LSP Diagnostic'})
+
+-- Show and telescope search snippets
+keymap("n", "<leader>s", ":Telescope luasnip <CR>", { desc = 'Show available snippets'})
