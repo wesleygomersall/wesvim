@@ -19,10 +19,16 @@ return {
         t("#!/usr/bin/env python3")
     ),
 
-	s({trig = 'if __name__ == "__m', desc = "if name main"},
-        t({ 'if __name__ == "__main__":',
-            '\tpass'
-        })
+	s({trig = 'if __name', desc = "if name main"},
+        t('if __name__ == "__main__":')
+    ),
+
+	s({trig = "'''", desc = "''' Docstring"},
+        { t("'''"), i(1), t("'''") }
+    ),
+
+	s({trig = '"""', desc = '""" Docstring'},
+        { t('"""'), i(1), t('"""') }
     ),
 
 }
