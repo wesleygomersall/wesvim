@@ -26,12 +26,7 @@ return {
     -- autotriggered snippets
 
 	s({trig = "#!/u", desc = "shebang"},
-<<<<<<< HEAD
-        t("#!/usr/bin/env python3")
-    ),
-
-	s({trig = 'if __name', desc = "if name main"},
-        t('if __name__ == "__main__":')
+        t({"#!/usr/bin/env python3", i(1)})
     ),
 
 	s({trig = "'''", desc = "''' Docstring"},
@@ -40,9 +35,6 @@ return {
 
 	s({trig = '"""', desc = '""" Docstring'},
         { t('"""'), i(1), t('"""') }
-=======
-        t({"#!/usr/bin/env python3", ""})
->>>>>>> f17b7bc (snippet edits)
     ),
 
 }
