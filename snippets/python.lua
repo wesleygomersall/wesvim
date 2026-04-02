@@ -26,7 +26,8 @@ return {
     -- autotriggered snippets
 
 	s({trig = "#!/u", desc = "shebang"},
-        {t("#!/usr/bin/env python3"), i(1)}
+        {t({"#!/usr/bin/env python3", ""}), 
+         i(1)}
     ),
 
 	s({trig = "'''", desc = "''' Docstring"},
