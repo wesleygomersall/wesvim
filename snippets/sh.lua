@@ -3,6 +3,18 @@
 return {
     -- manually triggered snippets
 
+    s({trig = "file_loop", desc = "Loop through files passed as arguments"},
+    {
+        t({'for file in "$@"; do', 
+           '\tif [ -f "$file" ]; then',
+           '\t\t',}),
+        i(1),
+        t({' "$file"',
+           '\tfi',
+           'done',})
+       }
+    ),
+
     s({trig = "slurm", desc = "Slurm header"},
         t({ '#SBATCH --account=',
             '#SBATCH --job-name=',
@@ -23,6 +35,10 @@ return {
 
 	s({trig = "#!/", desc = "shebang"},
         t({"#!/bin/bash", ""})
+    ),
+
+	s({trig = "TIMESTAMP=", desc = "Set TIMESTAMP variable"},
+        t({'TIMESTAMP=$(date +"%Y-%m-%d_%H:%M:%S")', ''})
     ),
 
 }
