@@ -19,6 +19,13 @@ return {
         t("wesg@uoregon.edu")
     ),
 
+	s({trig = "iehemail", desc = "IEH email address"},
+        t("wesley.gomersall@iehinc.com")
+    ),
+
+}, {
+    -- autotriggered snippets
+    
     -- complete parentheses & brackets
 	s({trig = "(", desc = "Add closing ')'"},
         { t("("), i(1), t(")") }
