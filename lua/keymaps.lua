@@ -104,5 +104,8 @@ keymap("n", "<leader>mp", ":cprev <CR>", { desc = 'Previous quickfix'})
 -- diagnostics (overwrote <leader>d)
 keymap("n", "<leader>h", ":lua vim.diagnostic.open_float() <CR>", { desc = 'LSP Diagnostic'})
 
+-- find definition
+keymap("n", "<leader>k", ":lua vim.lsp.buf.definition()<CR>", { desc = 'Go to definition'})
+
 -- Show and telescope search snippets
 keymap("n", "<leader>s", ":Telescope luasnip <CR>", { desc = 'Show available snippets'})
