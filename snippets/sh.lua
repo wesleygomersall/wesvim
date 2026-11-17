@@ -15,6 +15,16 @@ return {
        }
     ),
 
+    s({trig = "source miniconda", desc = "Enable using miniconda3 in script"},
+    {
+        t({ '# Allow conda in script',
+            'source $HOME/miniconda3/etc/profile.d/conda.sh', 
+            'conda activate ',
+        }),
+        i(1)
+    }
+    ),
+
     s({trig = "slurm", desc = "Slurm header"},
         t({ '#SBATCH --account=',
             '#SBATCH --job-name=',
