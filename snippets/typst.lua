@@ -1,5 +1,7 @@
 ---@diagnostic disable: undefined-global
 
+local conditions = require("luasnip.extras.conditions.expand")
+
 return {
     -- manually triggered snippets
 
@@ -24,7 +26,8 @@ return {
     -- autotriggered snippets
 
 	s({trig = "#text", desc = "text block"},
-        t("#text()[]")
+        t("#text()[]"),
+        {condition = conditions.line_begin}
     ),
 
 }

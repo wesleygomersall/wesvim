@@ -1,5 +1,7 @@
 ---@diagnostic disable: undefined-global
 
+local conditions = require("luasnip.extras.conditions.expand")
+
 return {
     -- manually triggered snippets
 
@@ -27,15 +29,15 @@ return {
 
 	s({trig = "#!/u", desc = "shebang"},
         {t({"#!/usr/bin/env python3", ""}), 
-         i(1)}
+         i(1)}, {condition = conditions.line_begin}
     ),
 
 	s({trig = "'''", desc = "''' Docstring"},
-        { t("'''"), i(1), t("'''") }
+        { t("'''"), i(1), t("'''") }, {condition = conditions.line_end}
     ),
 
 	s({trig = '"""', desc = '""" Docstring'},
-        { t('"""'), i(1), t('"""') }
+        { t('"""'), i(1), t('"""') }, {condition = conditions.line_end}
     ),
 
 }
