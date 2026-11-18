@@ -1,5 +1,7 @@
 ---@diagnostic disable: undefined-global
 
+local conditions = require("luasnip.extras.conditions.expand")
+
 return {
     -- manually triggered snippets
 
@@ -28,14 +30,14 @@ return {
     
     -- complete parentheses & brackets
 	s({trig = "(", desc = "Add closing ')'"},
-        { t("("), i(1), t(")") }
+        { t("("), i(1), t(")") }, {condition = conditions.line_end}
     ),
 
 	s({trig = "[", desc = "Add closing ']'"},
-        { t("["), i(1), t("]") }
+        { t("["), i(1), t("]") }, {condition = conditions.line_end}
     ),
 
 	s({trig = "{", desc = "Add closing '}'"},
-        { t("{"), i(1), t("}") }
+        { t("{"), i(1), t("}") }, {condition = conditions.line_end}
     ),
 }
